@@ -1,7 +1,8 @@
-const prompt = require("prompt-sync")()
+const prompt = require("prompt-sync")();
 const fs = require("fs");
+const inquirer = require("inquirer");
 
-const data = fs.readFileSync("../data/formulario.txt", {
+const formulario = fs.readFileSync("../data/formulario.txt", {
   encoding: "utf-8",
   flag: "r",
 });
@@ -15,32 +16,37 @@ const operacao = () => {
 6. Sair`;
 
   console.log(menu);
-  let opcao = prompt("Escolha uma das opções: ")
+  let opcao = prompt("Escolha uma das opções: ");
 
   switch (opcao) {
     case "1":
-        console.log("Você escolheu a opção 1")
-        break;
+      console.log("Você escolheu a opção 1");
+      break;
     case "2":
-        console.log("Você escolheu a opção 2")
-        break;
+      console.log("Você escolheu a opção 2");
+      break;
     case "3":
-        console.log("Você escolheu a opção 3")
-        break;
+      console.log("Você escolheu a opção 3");
+      break;
     case "4":
-        console.log("Você escolheu a opção 4")
-        break;
+      console.log("Você escolheu a opção 4");
+      break;
     case "5":
-        console.log("Você escolheu a opção 5")
-        break;
+      console.log("Você escolheu a opção 5");
+      break;
     case "6":
-        console.log("Encerrando o programa...")
-        process.exit(1);
+      console.log("Encerrando o programa...");
+      process.exit(1);
     default:
-        console.clear()
-        return operacao()
+      console.clear();
+      return operacao();
   }
-
 };
 
-operacao();
+const cadastro = () => {};
+
+const main = () => {
+  operacao();
+};
+
+main();
