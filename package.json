@@ -2,6 +2,7 @@
   "name": "sistema_cadastro_pets",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs",
     "test": "tests"
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/ArthurBerto/Sistema_Cadastro_Pets#readme",
   "description": "",
   "dependencies": {
+    "chalk": "^5.4.1",
     "inquirer": "^12.4.3",
     "prompt-sync": "^4.2.0"
   }

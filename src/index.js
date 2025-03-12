@@ -1,11 +1,19 @@
-const prompt = require("prompt-sync")();
-const fs = require("fs");
-const inquirer = require("inquirer");
+import chalk from 'chalk';
+import fs from 'fs';
+import prompt from 'prompt-sync'
 
-const formulario = fs.readFileSync("../data/formulario.txt", {
-  encoding: "utf-8",
-  flag: "r",
-});
+const printForm = () => {
+  try {
+    const formulario = fs.readFileSync("../data/formulario.txt", {
+      encoding: "utf-8",
+      flag: "r",
+    });
+
+    console.log(formulario);
+  } catch (err) {
+    console.log(`${chalk.bgRed.white("ERRO:")} Verifique se o diretório ../data/formulario.txt`);
+  }
+};
 
 const operacao = () => {
   const menu = `1. Cadastrar um novo pet
@@ -46,7 +54,7 @@ const operacao = () => {
 const cadastro = () => {};
 
 const main = () => {
-  operacao();
+  operacao()
 };
 
 main();
