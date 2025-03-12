@@ -45,7 +45,7 @@ const operacao = () => {
       console.log("Você escolheu a opção 5");
       break;
     case "6":
-      console.log("Encerrando o programa...");
+      console.log(chalk.bgBlue.white("Encerrando o programa..."));
       process.exit(1);
     default:
       console.clear();
