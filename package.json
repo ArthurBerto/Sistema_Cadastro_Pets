@@ -20,5 +20,8 @@
     "url": "https://github.com/ArthurBerto/Sistema_Cadastro_Pets/issues"
   },
   "homepage": "https://github.com/ArthurBerto/Sistema_Cadastro_Pets#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
