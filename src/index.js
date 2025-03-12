@@ -1,6 +1,8 @@
 import chalk from 'chalk';
 import fs from 'fs';
-import prompt from 'prompt-sync'
+import promptSync from 'prompt-sync';
+
+const prompt = promptSync()
 
 const printForm = () => {
   try {
