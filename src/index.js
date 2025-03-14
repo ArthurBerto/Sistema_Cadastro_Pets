@@ -1,8 +1,8 @@
-import chalk from 'chalk';
-import fs from 'fs';
-import promptSync from 'prompt-sync';
+import chalk from "chalk";
+import fs from "fs";
+import promptSync from "prompt-sync";
 
-const prompt = promptSync()
+const prompt = promptSync();
 
 const printForm = () => {
   try {
@@ -13,19 +13,22 @@ const printForm = () => {
 
     console.log(formulario);
   } catch (err) {
-    console.log(`${chalk.bgRed.white("ERRO:")} Verifique se o diretório ../data/formulario.txt`);
+    console.log(
+      `${chalk.bgRed.white(
+        "ERRO:"
+      )} Verifique se o diretório ../data/formulario.txt`
+    );
   }
 };
 
 const operacao = () => {
-  const menu = `1. Cadastrar um novo pet
-2. Alterar os dados do pet cadastrado
-3. Deletar um pet cadastrado
-4. Listar todos os pets cadastrados
-5. Listar pets por algum critério (idade, nome, raça)
-6. Sair`;
+  console.log("1. Cadastrar um novo pet");
+  console.log("2. Alterar os dados do pet cadastrado");
+  console.log("3. Deletar um pet cadastrado");
+  console.log("4. Listar todos os pets cadastrados");
+  console.log("5. Listar pets por algum critério (idade, nome, raça)");
+  console.log("6. Sair");
 
-  console.log(menu);
   let opcao = prompt("Escolha uma das opções: ");
 
   switch (opcao) {
@@ -56,7 +59,7 @@ const operacao = () => {
 const cadastro = () => {};
 
 const main = () => {
-  operacao()
+  operacao();
 };
 
 main();
